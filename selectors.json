@@ -1,0 +1,381 @@
+{
+  "_comment": "Domain-to-selector mapping for the PriceWatch dynamic selector engine. Add new domains here without touching content.js.",
+
+  "amazon.com": {
+    "name":        "#productTitle",
+    "price":       ".a-price .a-offscreen, #priceblock_ourprice, #priceblock_dealprice, .apexPriceToPay .a-offscreen",
+    "image":       "#landingImage, #imgTagWrapperId img",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li, .size-name",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled, [aria-disabled='true']"
+  },
+
+  "amazon.com.tr": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice, #priceblock_dealprice, #corePrice_feature_div .a-offscreen",
+    "image":       "#landingImage, #imgTagWrapperId img",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li, .size-name",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled, [aria-disabled='true']"
+  },
+
+  "amazon.de": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.fr": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.es": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.it": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.nl": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.pl": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.se": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.co.jp": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.in": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.com.br": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.com.mx": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.com.au": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.sg": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.ae": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.sa": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.co.uk": {
+    "name":        "#productTitle",
+    "price":       ".apexPriceToPay .a-offscreen, .a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "amazon.de": {
+    "name":        "#productTitle",
+    "price":       ".a-price .a-offscreen, #priceblock_ourprice",
+    "image":       "#landingImage",
+    "sizes":       "#native_dropdown_selected_size_name option, #variation_size_name li",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-dp-url=''], .a-disabled"
+  },
+
+  "ebay.com": {
+    "name":        "h1.x-item-title__mainTitle span",
+    "price":       ".x-price-primary span[itemprop='price'], .x-bin-price .x-price-primary",
+    "image":       "#icImg, .ux-image-carousel-item img",
+    "sizes":       ".x-msku__select-box option, [data-testid='x-msku-select-box'] option",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-selectortype='SIZE'][aria-disabled='true']"
+  },
+
+  "ebay.co.uk": {
+    "name":        "h1.x-item-title__mainTitle span",
+    "price":       ".x-price-primary span[itemprop='price']",
+    "image":       "#icImg",
+    "sizes":       ".x-msku__select-box option",
+    "sizeLabel":   "text",
+    "outOfStock":  "[aria-disabled='true']"
+  },
+
+  "zalando.de": {
+    "name":        "span[class*='EKabf'][data-testid='product-header-title'], h1[class*='_0Qm8W']",
+    "price":       "span[class*='dgII7'][data-testid='price'], p[class*='_0Qm8W']",
+    "image":       "img[class*='_6uf90'], img[itemprop='image']",
+    "sizes":       "button[class*='_0xLoY']:not([disabled]), button[class*='_0xLoY']",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[class*='_0xLoY'][disabled], button[class*='--out-of-stock']"
+  },
+
+  "zalando.co.uk": {
+    "name":        "span[class*='EKabf'], h1",
+    "price":       "span[class*='dgII7'], p[class*='price']",
+    "image":       "img[class*='_6uf90']",
+    "sizes":       "button[class*='_0xLoY']",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[class*='_0xLoY'][disabled]"
+  },
+
+  "asos.com": {
+    "name":        "h1[data-auto-id='product-title']",
+    "price":       "span[data-auto-id='current-price']",
+    "image":       "img[data-auto-id='product-gallery-image']",
+    "sizes":       "div[data-auto-id='sizeSelect'] button, select[data-auto-id='sizeSelect'] option",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[disabled], option[disabled], [aria-disabled='true']"
+  },
+
+  "nike.com": {
+    "name":        "h1.headline-5.css-1rjbgxj-Label, h1[data-testid='product-title'], h1[id*='pdp_product_title']",
+    "price":       "div[data-testid='currentPrice-container'], [data-testid='product-price'], .product-price, [class*='ProductPrice'], [class*='currentPrice']",
+    "image":       "img[data-testid='HeroImage-image'], .hero-image img",
+    "sizes":       "li[data-qa='size-available'], div[data-qa='size']",
+    "sizeLabel":   "button",
+    "outOfStock":  "[data-qa='size-unavailable'], li.disabled"
+  },
+
+  "adidas.com": {
+    "name":        "h1.product-description__title, h1[class*='Title']",
+    "price":       "div[class*='Price'] span, .price",
+    "image":       "img[class*='image-description'], img.gl-product-card__image",
+    "sizes":       "div[class*='size-selector'] button, button[class*='size-button']",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[disabled], .size-button--sold-out, button[aria-disabled='true']"
+  },
+
+  "uniqlo.com": {
+    "name":        "h1[class*='ProductTitle'], .product-name h1",
+    "price":       "span[class*='ProductPrice'], .product-price",
+    "image":       "img[class*='ProductImage'], .product-image-wrapper img",
+    "sizes":       "li[class*='SizeOption'], button[class*='size']",
+    "sizeLabel":   "text",
+    "outOfStock":  "li.disabled, li[class*='disabled'], button[disabled]"
+  },
+
+  "farfetch.com": {
+    "name":        "span[class*='ProductName'], h1[data-tstid='pdp-name']",
+    "price":       "p[data-tstid='price-wrapper'], span[class*='Price_currentPrice']",
+    "image":       "img[class*='ProductImage'], img[data-tstid='product-image']",
+    "sizes":       "div[data-tstid='sizes-container'] button",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[disabled], [data-tstid='sold-out']"
+  },
+
+  "hm.com": {
+    "name":        "h1.primary.product-item-headline",
+    "price":       "span.price-value",
+    "image":       "img.product-detail-main-image-front",
+    "sizes":       "hm-size-selector button, li[class*='size'] button",
+    "sizeLabel":   "text",
+    "outOfStock":  "button.disabled, button.out-of-stock, .size--out-of-stock"
+  },
+
+  "zara.com": {
+    "name":        "h1.product-detail-info__header-name",
+    "price":       "span.money-amount__main",
+    "image":       "img.media-image__image, li[class*='product-detail'] img",
+    "sizes":       "ul.size-selector__list li button",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[class*='out-of-stock'], button.is-disabled, button[disabled]"
+  },
+
+  "trendyol.com": {
+    "name":        "h1.pr-new-br span, .product-name",
+    "price":       ".prc-dsc, .product-price-container .prc-dsc, span.prc-slg",
+    "image":       "img.detail-section-img, .product-slide img",
+    "sizes":       ".sp-itm:not(.so), div[class*='variant'] .sp-itm",
+    "sizeLabel":   "text",
+    "outOfStock":  ".sp-itm.so, .so"
+  },
+
+  "hepsiburada.com": {
+    "name":        "h1[data-test-id='title'], h1#product-name",
+    "price":       "span[data-test-id='price-current-price'], #offering-price",
+    "image":       "img[data-test-id='product-image'], .product-image img",
+    "sizes":       "ul.variant-list li:not(.disabled), button[class*='variant']",
+    "sizeLabel":   "text",
+    "outOfStock":  "li.disabled, button[disabled]"
+  },
+
+  "n11.com": {
+    "name":        "h1.proName, .proDetail h1",
+    "price":       ".newPrice ins, .priceContainer .newPrice",
+    "image":       ".imgObj img, #productImg img",
+    "sizes":       ".sizeButtons li:not(.disabled)",
+    "sizeLabel":   "text",
+    "outOfStock":  ".sizeButtons li.disabled"
+  },
+
+  "migros.com.tr": {
+    "name":        "h1.product-name, .product-detail-name",
+    "price":       ".sale-price, .price-payment, .product-price ins",
+    "image":       ".product-image img, picture img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  ".out-of-stock, .stock-info--unavailable"
+  },
+
+  "getir.com": {
+    "name":        "h1, .product-detail-name",
+    "price":       ".product-price, [class*='price']",
+    "image":       ".product-detail-image img, picture img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  "[class*='out-of-stock'], [class*='unavailable']"
+  },
+
+  "carrefoursa.com": {
+    "name":        "h1.product-name",
+    "price":       ".product-price .price, span.spotPrice",
+    "image":       ".product-image img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  ".stock-status--out, .out-of-stock"
+  },
+
+  "bestbuy.com": {
+    "name":        "h1.heading-5, h1[data-testid='product-title']",
+    "price":       "div[data-testid='customer-price'] span, .priceView-customer-price span",
+    "image":       "img.primary-image, picture img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  "button[data-button-state='SOLD_OUT'], .fulfillment-add-to-cart-button--sold-out"
+  },
+
+  "mediamarkt.com": {
+    "name":        "h1[class*='ProductTitle'], h1.fyZeKv",
+    "price":       "span[class*='Price'], div[data-test='mms-price-display']",
+    "image":       "img[class*='ProductImage'], picture img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  "[class*='out-of-stock'], button[disabled]"
+  },
+
+  "mediamarkt.com.tr": {
+    "name":        "h1[class*='ProductTitle']",
+    "price":       "span[class*='Price'], div[data-test='mms-price-display']",
+    "image":       "img[class*='ProductImage']",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  "[class*='out-of-stock'], button[disabled]"
+  },
+
+  "currys.co.uk": {
+    "name":        "h1[data-test='product-title']",
+    "price":       "span[data-test='current-price'], .product-price",
+    "image":       "img[data-test='product-image']",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  "[data-test='out-of-stock'], button[disabled]"
+  },
+
+  "vatanbilgisayar.com": {
+    "name":        "h1.product-name, h1.detail-name",
+    "price":       ".prd-prc, .product-price span",
+    "image":       ".product-image img, .gallery img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  ".out-of-stock, .stock-status.unavailable"
+  },
+
+  "teknosa.com": {
+    "name":        "h1.pName, h1[class*='product-name']",
+    "price":       ".prc, .priceBox .sale, span[class*='price']",
+    "image":       ".pImg img, .product-gallery img",
+    "sizes":       "",
+    "sizeLabel":   "text",
+    "outOfStock":  ".stock-warning, button[disabled]"
+  }
+}

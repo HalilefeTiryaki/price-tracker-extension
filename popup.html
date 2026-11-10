@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PriceWatch</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header class="pw-header">
+    <div class="pw-logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 14.5h-1v-6h1v6zm0-8h-1V7h1v1.5z" fill="currentColor"/>
+        <path d="M7 12l3 3 7-7" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      PriceWatch
+    </div>
+    <button class="pw-btn-icon" id="refreshBtn" title="Check all prices now" aria-label="Refresh all tracked products">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- ── Status Banner (hidden by default) ──────────────────────────────── -->
+  <div class="pw-banner" id="statusBanner" aria-live="polite" hidden></div>
+
+  <!-- ── Add from current tab ───────────────────────────────────────────── -->
+  <section class="pw-section pw-add-section" id="addSection">
+    <div class="pw-section-label">Track this page</div>
+
+    <div class="pw-product-preview" id="productPreview" hidden>
+      <img class="pw-preview-img" id="previewImg" src="" alt="Product image" />
+      <div class="pw-preview-meta">
+        <span class="pw-preview-name" id="previewName">—</span>
+        <span class="pw-preview-price" id="previewPrice">—</span>
+      </div>
+    </div>
+
+    <div class="pw-empty-state" id="noProduct">
+      <span>Navigate to a product page to add it.</span>
+    </div>
+
+    <!-- Size selector -->
+    <div class="pw-field" id="sizeField" hidden>
+      <label class="pw-label" for="sizeSelect">Your size</label>
+      <select class="pw-select" id="sizeSelect">
+        <option value="">— Any / not tracking size —</option>
+      </select>
+    </div>
+
+    <!-- Alert mode -->
+    <div class="pw-field" id="alertField" hidden>
+      <label class="pw-label">Alert me when</label>
+      <div class="pw-radio-group">
+        <label class="pw-radio">
+          <input type="radio" name="alertMode" value="anyDrop" checked />
+          <span>Any price drop</span>
+        </label>
+        <label class="pw-radio">
+          <input type="radio" name="alertMode" value="targetPrice" />
+          <span>Below target price</span>
+        </label>
+        <label class="pw-radio">
+          <input type="radio" name="alertMode" value="stockOnly" />
+          <span>Size restocked only</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Target price (shown conditionally) -->
+    <div class="pw-field pw-target-field" id="targetPriceField" hidden>
+      <label class="pw-label" for="targetPrice">Target price</label>
+      <div class="pw-input-group">
+        <span class="pw-input-prefix" id="currencySymbol">$</span>
+        <input class="pw-input" type="number" id="targetPrice" placeholder="e.g. 49.99" min="0" step="0.01" />
+      </div>
+    </div>
+
+    <button class="pw-btn pw-btn-primary" id="trackBtn" hidden>
+      Track this product
+    </button>
+  </section>
+
+  <!-- ── Tracked Items List ──────────────────────────────────────────────── -->
+  <section class="pw-section" id="listSection">
+    <div class="pw-section-label">
+      Active tracking
+      <span class="pw-badge" id="itemCount">0</span>
+    </div>
+
+    <ul class="pw-item-list" id="itemList" aria-label="Tracked products"></ul>
+
+    <div class="pw-empty-list" id="emptyList">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor" opacity=".3"/>
+      </svg>
+      <span>No products tracked yet.</span>
+    </div>
+  </section>
+
+  <!-- ── Price History Modal ─────────────────────────────────────────────── -->
+  <div class="pw-modal-overlay" id="historyOverlay" hidden aria-modal="true" role="dialog" aria-label="Price history">
+    <div class="pw-modal">
+      <div class="pw-modal-header">
+        <span class="pw-modal-title" id="historyTitle">Price History</span>
+        <button class="pw-btn-icon" id="closeHistory" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+      <canvas class="pw-chart" id="historyChart" width="320" height="140" aria-label="Price history chart"></canvas>
+      <ul class="pw-history-list" id="historyList" aria-label="Price history entries"></ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
